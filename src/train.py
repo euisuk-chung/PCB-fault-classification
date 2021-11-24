@@ -12,10 +12,8 @@ from torch.cuda import amp # automatic mixed precision (to accelerate computatio
 
 from torchvision import transforms
 from torchvision.models import resnet50
-
 from warmup_scheduler import GradualWarmupScheduler
 
-from src.model import PlainResnet50, PlainEfficientnetB4
 from utils.imageprocess import image_transformer, image_processor
 from utils.EarlyStopping import EarlyStopping
 from utils.dataloader import CustomDataLoader
