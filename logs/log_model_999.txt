@@ -1,0 +1,424 @@
+2021-06-15 11:00:25,962 : START
+2021-06-15 11:00:25,970 : Global Device: cuda:1
+2021-06-15 11:00:25,970 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='pretrained_resnet101', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=1, epochs=50, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='train', model_index=999, patience=10, pretrained=False, pretrained_weights_dir='/repo/course/sem21_01/PCB-fault-classification/pretrained_model', seed=227182, test_ratio=0.2, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-15 11:00:25,978 : Trainset(train+val) length: 2400, Testset length: 600
+2021-06-15 11:00:26,062 : Trainset length: 2040, Valset length: 360
+2021-06-15 11:00:26,985 : Not using pretrained model.
+2021-06-15 11:00:30,658 : Training on Fold (1/1)
+2021-06-15 11:00:30,665 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.003
+    lr: 0.003
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f9ad50f07f0>
+                    ---------------------------------------------------------------------------
+2021-06-15 11:00:30,665 : Training begins... Epochs = 50
+2021-06-15 11:00:30,666 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:01:45,630 : START
+2021-06-15 11:01:45,637 : Global Device: cuda:1
+2021-06-15 11:01:45,637 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='pretrained_resnet101', batch_size=8, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=1, epochs=50, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=999, patience=10, pretrained=False, pretrained_weights_dir='/repo/course/sem21_01/PCB-fault-classification/pretrained_model', seed=227182, test_ratio=0.2, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-15 11:01:45,646 : Trainset(train+val) length: 2400, Testset length: 600
+2021-06-15 11:01:45,711 : Trainset length: 2040, Valset length: 360
+2021-06-15 11:01:46,522 : Not using pretrained model.
+2021-06-15 11:01:50,222 : Inference using model of fold (1/1)
+2021-06-15 11:02:21,771 : START
+2021-06-15 11:02:21,779 : Global Device: cuda:1
+2021-06-15 11:02:21,779 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='pretrained_resnet101', batch_size=16, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=1, epochs=50, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='train', model_index=999, patience=10, pretrained=False, pretrained_weights_dir='/repo/course/sem21_01/PCB-fault-classification/pretrained_model', seed=227182, test_ratio=0.2, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-15 11:02:21,789 : Trainset(train+val) length: 2400, Testset length: 600
+2021-06-15 11:02:21,853 : Trainset length: 2040, Valset length: 360
+2021-06-15 11:02:22,704 : Not using pretrained model.
+2021-06-15 11:02:26,330 : Training on Fold (1/1)
+2021-06-15 11:02:26,337 : 
+                    ---------------------------------------------------------------------------
+                        TRAINING INFO
+                            Loss function : BCEWithLogitsLoss()
+                            Optimizer     : RAdam (
+Parameter Group 0
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    initial_lr: 0.003
+    lr: 0.003
+    weight_decay: 0.0001
+)
+                            LR_Scheduler  : <torch.optim.lr_scheduler.MultiStepLR object at 0x7f14ce3c6860>
+                    ---------------------------------------------------------------------------
+2021-06-15 11:02:26,337 : Training begins... Epochs = 50
+2021-06-15 11:02:26,337 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 1th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:03:49,402 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 1th epoch
+        Time taken      : 1m 23.06s
+        Training Loss   : 0.397064  |  Training Acc   : 82.6389%
+        Validation Loss : 0.310454  |  Validation Acc : 88.2870%
+===========================================================================
+
+2021-06-15 11:03:49,402 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 2th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:05:17,370 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 2th epoch
+        Time taken      : 1m 27.97s
+        Training Loss   : 0.346953  |  Training Acc   : 86.2827%
+        Validation Loss : 0.329311  |  Validation Acc : 84.3981%
+===========================================================================
+
+2021-06-15 11:05:17,370 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 3th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:06:40,220 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 3th epoch
+        Time taken      : 1m 22.85s
+        Training Loss   : 0.291205  |  Training Acc   : 88.7092%
+        Validation Loss : 0.258875  |  Validation Acc : 90.6944%
+===========================================================================
+
+2021-06-15 11:06:40,220 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 4th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:08:03,243 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 4th epoch
+        Time taken      : 1m 23.02s
+        Training Loss   : 0.273026  |  Training Acc   : 89.3627%
+        Validation Loss : 0.254240  |  Validation Acc : 90.6944%
+===========================================================================
+
+2021-06-15 11:08:03,243 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 5th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:09:26,011 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 5th epoch
+        Time taken      : 1m 22.77s
+        Training Loss   : 0.310410  |  Training Acc   : 88.1536%
+        Validation Loss : 0.263747  |  Validation Acc : 91.0648%
+===========================================================================
+
+2021-06-15 11:09:26,011 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 6th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:10:48,702 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 6th epoch
+        Time taken      : 1m 22.69s
+        Training Loss   : 0.276887  |  Training Acc   : 89.1993%
+        Validation Loss : 0.251606  |  Validation Acc : 90.2778%
+===========================================================================
+
+2021-06-15 11:10:48,703 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 7th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:12:10,925 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 7th epoch
+        Time taken      : 1m 22.22s
+        Training Loss   : 0.333504  |  Training Acc   : 86.5523%
+        Validation Loss : 0.260341  |  Validation Acc : 89.9537%
+===========================================================================
+
+2021-06-15 11:12:10,925 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 8th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:13:32,844 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 8th epoch
+        Time taken      : 1m 21.92s
+        Training Loss   : 0.292505  |  Training Acc   : 88.5948%
+        Validation Loss : 0.245431  |  Validation Acc : 90.5556%
+===========================================================================
+
+2021-06-15 11:13:32,844 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 9th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:14:55,345 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 9th epoch
+        Time taken      : 1m 22.50s
+        Training Loss   : 0.296504  |  Training Acc   : 88.3578%
+        Validation Loss : 0.278574  |  Validation Acc : 90.5556%
+===========================================================================
+
+2021-06-15 11:14:55,345 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 10th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:16:17,893 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 10th epoch
+        Time taken      : 1m 22.55s
+        Training Loss   : 0.280076  |  Training Acc   : 88.7745%
+        Validation Loss : 0.269971  |  Validation Acc : 87.6852%
+===========================================================================
+
+2021-06-15 11:16:17,893 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 11th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:17:40,598 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 11th epoch
+        Time taken      : 1m 22.70s
+        Training Loss   : 0.279422  |  Training Acc   : 88.6683%
+        Validation Loss : 0.701130  |  Validation Acc : 73.7037%
+===========================================================================
+
+2021-06-15 11:17:40,598 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 12th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:19:02,711 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 12th epoch
+        Time taken      : 1m 22.11s
+        Training Loss   : 0.323913  |  Training Acc   : 86.8219%
+        Validation Loss : 0.252464  |  Validation Acc : 89.5370%
+===========================================================================
+
+2021-06-15 11:19:02,711 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 13th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:20:24,693 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 13th epoch
+        Time taken      : 1m 21.98s
+        Training Loss   : 0.391244  |  Training Acc   : 83.4804%
+        Validation Loss : 0.304617  |  Validation Acc : 85.8796%
+===========================================================================
+
+2021-06-15 11:20:24,693 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 14th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:21:46,758 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 14th epoch
+        Time taken      : 1m 22.06s
+        Training Loss   : 0.378199  |  Training Acc   : 84.7958%
+        Validation Loss : 0.312151  |  Validation Acc : 87.8241%
+===========================================================================
+
+2021-06-15 11:21:46,758 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 15th epoch
+        Learning Rate : 0.003000
+---------------------------------------------------------------------------
+2021-06-15 11:23:08,765 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 15th epoch
+        Time taken      : 1m 22.01s
+        Training Loss   : 0.321081  |  Training Acc   : 87.1487%
+        Validation Loss : 0.294099  |  Validation Acc : 89.3519%
+===========================================================================
+
+2021-06-15 11:23:08,766 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 16th epoch
+        Learning Rate : 0.002100
+---------------------------------------------------------------------------
+2021-06-15 11:24:30,815 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 16th epoch
+        Time taken      : 1m 22.05s
+        Training Loss   : 0.268859  |  Training Acc   : 89.3791%
+        Validation Loss : 0.248325  |  Validation Acc : 89.0741%
+===========================================================================
+
+2021-06-15 11:24:30,815 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 17th epoch
+        Learning Rate : 0.002100
+---------------------------------------------------------------------------
+2021-06-15 11:25:53,053 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 17th epoch
+        Time taken      : 1m 22.24s
+        Training Loss   : 0.252905  |  Training Acc   : 90.4739%
+        Validation Loss : 0.243529  |  Validation Acc : 90.5093%
+===========================================================================
+
+2021-06-15 11:25:53,054 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 18th epoch
+        Learning Rate : 0.002100
+---------------------------------------------------------------------------
+2021-06-15 11:27:15,341 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 18th epoch
+        Time taken      : 1m 22.29s
+        Training Loss   : 0.268448  |  Training Acc   : 89.3627%
+        Validation Loss : 0.253449  |  Validation Acc : 89.2593%
+===========================================================================
+
+2021-06-15 11:27:15,341 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 19th epoch
+        Learning Rate : 0.002100
+---------------------------------------------------------------------------
+2021-06-15 11:28:37,502 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 19th epoch
+        Time taken      : 1m 22.16s
+        Training Loss   : 0.262147  |  Training Acc   : 89.7958%
+        Validation Loss : 0.242460  |  Validation Acc : 90.4167%
+===========================================================================
+
+2021-06-15 11:28:37,502 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 20th epoch
+        Learning Rate : 0.002100
+---------------------------------------------------------------------------
+2021-06-15 11:29:59,774 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 20th epoch
+        Time taken      : 1m 22.27s
+        Training Loss   : 0.252747  |  Training Acc   : 90.1879%
+        Validation Loss : 0.239802  |  Validation Acc : 90.3704%
+===========================================================================
+
+2021-06-15 11:29:59,774 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 21th epoch
+        Learning Rate : 0.001470
+---------------------------------------------------------------------------
+2021-06-15 11:31:21,760 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 21th epoch
+        Time taken      : 1m 21.99s
+        Training Loss   : 0.265821  |  Training Acc   : 89.4036%
+        Validation Loss : 0.253817  |  Validation Acc : 89.1204%
+===========================================================================
+
+2021-06-15 11:31:21,760 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 22th epoch
+        Learning Rate : 0.001470
+---------------------------------------------------------------------------
+2021-06-15 11:32:43,250 : 
+---------------------------------------------------------------------------
+    SUMMARY
+        Finished phase  : 22th epoch
+        Time taken      : 1m 21.49s
+        Training Loss   : 0.256611  |  Training Acc   : 89.9101%
+        Validation Loss : 0.239815  |  Validation Acc : 90.5093%
+===========================================================================
+
+2021-06-15 11:32:43,251 : 
+===========================================================================
+    PHASE INFO
+        Current fold  : Fold (1)
+        Current phase : 23th epoch
+        Learning Rate : 0.001470
+---------------------------------------------------------------------------
+2021-06-15 11:33:28,905 : START
+2021-06-15 11:33:28,941 : Global Device: cuda:1
+2021-06-15 11:33:28,941 : Parsed Args: Namespace(base_dir='/repo/course/sem21_01/PCB-fault-classification/', base_model='pretrained_resnet101', batch_size=16, ckpt_path='/repo/course/sem21_01/PCB-fault-classification/ckpt/', cuda=True, data_type='original', device_index=1, epochs=50, fold_k=1, label_dir='/repo/course/sem21_01/PCB-fault-classification/label.csv', learning_rate=0.003, lr_type='multi', mode='test', model_index=999, patience=10, pretrained=False, pretrained_weights_dir='/repo/course/sem21_01/PCB-fault-classification/pretrained_model', seed=227182, test_ratio=0.2, threshold=0.0, tta=False, val_ratio=0.15, verbose=20, voting='hard')
+2021-06-15 11:33:28,949 : Trainset(train+val) length: 2400, Testset length: 600
+2021-06-15 11:33:29,011 : Trainset length: 2040, Valset length: 360
+2021-06-15 11:33:29,776 : Not using pretrained model.
+2021-06-15 11:33:33,421 : Inference using model of fold (1/1)
