@@ -76,6 +76,7 @@ def load_trainset(train_df=None, mode='train', device=None, train_index=None, va
             train_loader = torch.utils.data.DataLoader(train_set,
                                                        sampler=ImbalancedDatasetSampler(train_set),
                                                        batch_size=batch_size)
+            
         val_loader = torch.utils.data.DataLoader(val_set, batch_size=32, shuffle=False)
         return train_loader, val_loader
 
@@ -116,7 +117,6 @@ def make_inference(args, model, test_loader, test_tot_num):
     test_corrects_sum = 0
     test_loss_sum = 0.0
 
-
     for idx, single_test_loader in enumerate(test_loader):
         logger.info(f"Inference on test_loader ({idx+1}/{len(test_loader)})")
 
@@ -146,14 +146,11 @@ def make_inference(args, model, test_loader, test_tot_num):
 ---------------------------------------------------------------------------
     SUMMARY
         Test Acc        : {test_acc:.4f}%
-===========================================================================\n""")
-
-        
+===========================================================================\n""")        
         logger.info("Done.")
 
         test_corrects_sum = 0
         test_loss_sum = 0.0
-
 
         total_set.append(np.concatenate(fin_labels))
     
@@ -186,9 +183,9 @@ if __name__ == "__main__":
     parser.add_argument("--mode", type=str, default="train", help='[train | train_ovr | test]')
     parser.add_argument("--data_type", type=str, default="original", help='[original | denoised]: default=denoised')
     parser.add_argument("--ckpt_path", type=str, default="/repo/course/sem21_01/PCB-fault-classification/ckpt", help='PATH to weights of ckpts.')
-    parser.add_argument("--base_model", type=str, default="plain_resnet50", help="[plain_resnet50, custom_resnet50, plain_efficientnetb4, plain_efficientnetb5, plain_efficientnetb7]")
+    parser.add_argument("--base_model", type=str, default="plain_resnet50", help="[plain_resnet50, custom_resnet50, plain_efficientnetb4]")
     parser.add_argument("--pretrained", dest='pretrained', action='store_true', help='Default is false, so specify this argument to use pretrained model')
-    parser.add_argument("--pretrained_weights_dir", type=str, default="/repo/course/sem21_01/PCB-fault-classification/pretrained_model", help='PATH to weights of pretrained model')
+    parser.add_argument("--pretrained_weights_dir", type=str, default="/home/ys/repo/PCB-fault-classification/pretrained_model", help='PATH to weights of pretrained model')
     parser.add_argument("--cuda", dest='cuda', action='store_false', help='Whether to use CUDA: defuault is True, so specify this argument not to use CUDA')
     parser.add_argument("--device_index", type=int, default=0, help='Cuda device to use. Used for multiple gpu environment')
     parser.add_argument("--batch_size", type=int, default=8, help='Batch size for train-loader for training phase')
@@ -255,7 +252,6 @@ if __name__ == "__main__":
     # -------------------
     #   TRAIN/VAL SPLIT
     # -------------------
-
     label_df = pd.read_csv(args.label_dir)
     tot_num = label_df.shape[0]
     

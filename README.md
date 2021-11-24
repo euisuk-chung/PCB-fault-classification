@@ -1,13 +1,20 @@
 # PCB-fault-classification
 Multi-label Classification of PCB Faults by Image Processing
 
+## Participants
+- Kyoosung So [mons2us](https://github.com/mons2us)
+- Euisuk Chung [chung_es](https://github.com/euisuk-chung)
+- Yunseung Lee [yun-ss97](https://github.com/yun-ss97)
+
+
 ## 주의사항
 
-### (1) 폴더구조
-- main.py의 base_dir, ckpt_path, pretrained_weights_dir는 각자 working directory 기반으로 맞출 것
-- dataset 폴더에 DeepPCB 데이터셋 폴더 그대로 이동
+### (1) Data Used
+- Source : https://github.com/tangsanli5201/DeepPCB
+- Used DeepPCB Dataset, a dataset contains 1,500 image pairs, each of which consists of a defect-free template image and an aligned tested image with annotations
+    - Dataset includes positions of 6 most common types of PCB defects: `open`, `short`, `mousebite`, `spur`, `pin hole` and `spurious copper`. 
 
-(예시) 
+**(Example)**
 ```bash
 ├── dataset                    
     ├── group00041  
@@ -23,14 +30,16 @@ Multi-label Classification of PCB Faults by Image Processing
 
 이외 폴더 구조는 동일하게 하면 됨
 
-### (2) 모델
-다른 모델을 사용하는 경우,<br>
-src/model.py에 해당 모델을 추가하면 되고(+import)<br>
-utils/call_model.py에 앞서와 동일하게 코드 추가하면 됨.<br>
+### (2) Model
+- Uses Following Models
+    - resnet18, resnet50, resnet101,
+    - vgg11, vgg16, vgg19,
+    - densenet121, densenet169, densenet201
+    - EfficientNetB4, EfficientNetB5, EfficientNetB7
 
-### (3) 하이퍼파라미터
-lr scheduler나 optimizer 같은 경우 src/train.py에서 직접 수정하면 됨<br>
-현재는 multisteplr 사용하고 있음<br>
+### (3) Hyper Parameter
+- lr scheduler나 optimizer 같은 경우 src/train.py에서 직접 수정하면 됨<br>
+- 본 프로젝트는 multisteplr 사용하고 있음<br>
 
 
 ## Usage:
